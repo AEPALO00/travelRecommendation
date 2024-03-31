@@ -1,0 +1,66 @@
+ /* https://es.stackoverflow.com/questions/337498/c%C3%B3mo-ajustar-imagen-de-fondo-en-etiqueta-body */
+/* body {
+background: url('./imgs/bckground.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+margin: 0;
+height: 100vh;
+} */
+
+body {
+min-height: 100%;
+height: 100vh;
+}
+
+.demo-wrap {
+position: relative;
+}
+
+.demo-wrap:before {
+content: ' ';
+display: block;
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+opacity: 0.3;
+background-image: url('./imgs/bckground.jpg');
+background-repeat: no-repeat;
+background-position: 0% 0;
+background-position: 0% 0;
+background-size: 100%;
+}
+
+.demo-content {
+position: relative;
+display:inline-block;
+}
+
+#title_page {
+    padding: 10px; 
+    width:280px; 
+    text-align:center; 
+    margin-top: 45px; 
+    margin-left: calc(35% - 140px); 
+    background-color:rgb(244, 161, 173); 
+    border-radius: 10px
+}
+
+#btn_book_now {
+    border-radius: 7px;
+    background-color: rgb(94, 170, 236);
+    color: white;
+    width: 100px;
+    margin-left: calc(35% - 50px); 
+}
+
+.p_description {
+    text-align: center;
+    border-radius: 7px;
+    padding: 5px;
+    width: 300px;
+    left: 50%;
+    margin-left: calc(35% - 150px); 
+    background-color: rgb(193, 232, 193);
+}
