@@ -3,63 +3,28 @@
     <meta charset="UTF-8">
     <title>travelRecommendation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        /* https://es.stackoverflow.com/questions/337498/c%C3%B3mo-ajustar-imagen-de-fondo-en-etiqueta-body */
-        /* body {
-        background: url('./imgs/bckground.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin: 0;
-        height: 100vh;
-        } */
+    <link href="../styles.css" rel="stylesheet">
+    <script src="../travel_recommendation.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll("a");
+    
+            links.forEach((link) => {
+                link.classList.remove("active");
+            });
+            
+            document.getElementById("about_us").classList.add("active");
+        });
 
-        body {
-        min-height: 100%;
-        height: 100vh;
-        }
-
-        .demo-wrap {
-        position: relative;
-        }
-
-        .demo-wrap:before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.6;
-        background-image: url('../imgs/bckground.jpg');
-        background-repeat: no-repeat;
-        background-position: 0% 0;
-        background-position: 0% 0;
-        background-size: 100%;
-        }
-
-        .demo-content {
-        position: relative;
-        display:inline-block;
-        }
-
-        #title_page {
-            padding: 10px; 
-            width:275px; 
-            text-align:center; 
-            margin:45px 0 0 100px; 
-            background-color:rgb(255, 240, 245); 
-            border-radius: 10px
-        }
-    </style>
+    </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="nav_bar" class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="navbar-brand ms-2" href="./travel_recommendation.html">
-                    <img src="./imgs/icon.png" alt="" height="35">
+                    <img src="../imgs/icon.png" alt="" height="35">
                 </a>
               </li>
               <li class="nav-item">
@@ -67,13 +32,13 @@
               </li> 
               <div class="nav-item position-absolute top-50 start-50 translate-middle">
                   <li class="nav-item" style="display:inline-block">
-                    <a class="nav-link active" aria-current="page" href="./travel_recommendation.html">Home</a>
+                    <a class="nav-link active" id="home" aria-current="page" href="./travel_recommendation.html">Home</a>
                   </li>
                   <li class="nav-item" style="display:inline-block">
-                    <a class="nav-link" href="./about_us.html">About Us</a>
+                    <a class="nav-link" id="about_us" href="./about_us.html">About Us</a>
                   </li>
                   <li class="nav-item" style="display:inline-block">
-                    <a class="nav-link" href="./contact_us.html">Contact Us</a>
+                    <a class="nav-link" id="contact_us" href="./contact_us.html">Contact Us</a>
                   </li>
               </div>
             </ul>
@@ -85,15 +50,62 @@
           </div>
     </nav>
 
-    <div id="container" class="demo-wrap" style="height:100%">
-        <div class="demo-content" id="about_us" style="width:60%;">
-            <h1 id="title_page">ADVENTURE IN A NEW COUNTRY & CULTURE</h1>
-        </div>
+    <div id="container" class="demo-wrap" style="height:100%; text-align: center;">
+        <div class="demo-content" style="width:90%;" id="about_us">
+            <div style="margin-top:45px">
+                <h1 id="title_page_about_us">ABOUT US</h1>
+                <br><br>
+                <p class="p_about_us">
+                    As one of the top 10 companies of tour recommendations, we 
+                    welcome you to <i>PaloFlight</i>. We are a team of four people
+                    committed to help you find the best destinations based on 
+                    your trip preferences. Our mission is to serve you a powerful
+                    search engine for travel advice. 
     
-        <div class="demo-content" id="search">
-            a
+                    <i>PaloFlight</i> was founded over three main values: transparency,
+                    innovation, and honesty. Our goal is to provide the most safe, cheap,
+                    and beautiful recommendations.
+                </p>
+            </div>
+            <br>
+            <div class="demo-content" style="margin-top:25px">
+                <div class="div_about_us_members">
+                    <p class="team_members">
+                        Team<br>Members
+                    </p>
+                </div>
+                <div class="div_about_us_members">
+                    <p class="name_member">
+                        Andrés Palomares<br>CEO
+                    </p>
+                </div>
+                <div class="div_about_us_members">
+                    <p class="name_member">
+                        Juan Palomares<br>CFO
+                    </p>
+                </div>
+                <div class="div_about_us_members">
+                    <p class="name_member">
+                        Edgar Palomares<br>COO
+                    </p>
+                </div>
+                <div class="div_about_us_members">
+                    <p class="name_member">
+                        Carla Palomares<br>CMO
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+    <div style="text-align: center; background-color: white; padding: 15px">
+        <div style="display: inline-block">
+            <img style="margin: 0 10px" src="../imgs/facebook.png" alt="" height="35">
+            <img style="margin: 0 10px" src="../imgs/youtube.png" alt="" height="35">
+            <img style="margin: 0 10px" src="../imgs/instagram.png" alt="" height="35">
         </div>
     </div>
-
 </body>
 </html>

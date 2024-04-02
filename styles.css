@@ -47,6 +47,14 @@ display:inline-block;
     border-radius: 10px
 }
 
+#title_page_about_us {
+    width:300px; 
+    text-align:center; 
+    margin: auto; 
+    background-color:rgb(244, 161, 173); 
+    border-radius: 10px
+}
+
 #btn_book_now {
     border-radius: 7px;
     background-color: rgb(94, 170, 236);
@@ -63,4 +71,51 @@ display:inline-block;
     left: 50%;
     margin-left: calc(35% - 150px); 
     background-color: rgb(193, 232, 193);
+}
+
+.p_about_us {
+    text-align: center;
+    border-radius: 7px;
+    margin: auto;
+    padding: 5px;
+    width: 80%;
+    background-color: rgb(193, 232, 193);
+}
+
+.name_member {
+    border-radius: 7px;
+    background-color: rgb(94, 170, 236);
+    color: black;
+    margin: 0;
+    padding: 5px;
+}
+
+.team_members {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 3px;
+}
+
+.div_about_us_members {
+    height:60px; 
+    display:inline-block;
+}
+
+#form {
+    width: 650px;
+    padding: 20px;
+    margin-top: 45px;
+    background-color: antiquewhite;
+}
+
+#form input {
+    background-color: none;
+    width: 600px;
+    color: black;
+}
+
+#form textarea {
+    background-color: none;
+    color: black;
+    width: 600px;
 }
