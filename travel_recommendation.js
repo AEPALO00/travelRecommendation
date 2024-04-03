@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(in_search === ""){
             alert("Please, type a word/phrase to show results.")
         } else{
-            await fetch("../travel_recommendation.json")
+            await fetch("./travel_recommendation.json")
             .then(response => response.json())
             .then((fetch_data) => {
                 data = fetch_data;
