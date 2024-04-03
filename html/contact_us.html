@@ -13,6 +13,15 @@
             });
             
             document.getElementById("contact_us").classList.add("active");
+
+            // submit form
+            document.getElementById("btn_submit").addEventListener("click", () => {
+                document.getElementById("form_name").value = null;
+                document.getElementById("form_email").value = null;
+                document.getElementById("form_message").value = null;
+
+                alert("Thank you for contactin us. Our team will contact you as soon as possible.")
+            });
         });
 
     </script>
@@ -64,9 +73,9 @@
                   </div>
                   <div class="mb-3">
                     <label for="form_message" class="form-label">Message</label>
-                    <textarea class="form-control" id="form_message" rows="6">Type here...</textarea>
+                    <textarea class="form-control" id="form_message" rows="6" placeholder="Type here..."></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                <button id="btn_submit" type="submit">Submit</button>
             </div>
         </div>
 

@@ -31,6 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
             
             console.log(results);
             results.forEach((destination) => {
+                const options = { timeZone: destination["timeZone"], hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+                const cityTime = new Date().toLocaleTimeString('en-US', options);
+                
                 let div_dest  = document.createElement("div");
                 let dest_name = destination.name.split(",")[0].split(" ")[0].toLowerCase();
                 let div2      = document.createElement("div");
@@ -57,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 h3.innerHTML = destination["name"];
 
                 // description
-                p.innerHTML = destination["description"];
+                p.innerHTML = "Local Time: <strong>" + cityTime + "</strong><br>" + destination["description"];
                 p.style.margin = "0";
 
                 div2.appendChild(img);
